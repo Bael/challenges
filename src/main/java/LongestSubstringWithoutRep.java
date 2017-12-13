@@ -10,10 +10,12 @@ public class LongestSubstringWithoutRep {
             int maxlen = 0;
 
             // temp set of elements
-            HashSet<String> subseq = new HashSet<>();
+            HashSet<Character> subseq = new HashSet<>();
+            char[] chars = s.toCharArray();
+
             while (finish < s.length()) {
 
-                String currentSymbol = s.substring(finish, finish+1);
+                char currentSymbol = chars[finish];
 
                 // if found repetition, clear current sequence and update maxlen if needed.
                 if (subseq.contains(currentSymbol)) {
