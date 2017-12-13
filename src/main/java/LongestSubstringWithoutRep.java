@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
 
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 public class LongestSubstringWithoutRep {
         public int lengthOfLongestSubstring(String s) {
             int start = 0;
@@ -12,6 +13,7 @@ public class LongestSubstringWithoutRep {
             // temp set of elements
             HashSet<Character> subseq = new HashSet<>();
             char[] chars = s.toCharArray();
+
 
             while (finish < s.length()) {
 
